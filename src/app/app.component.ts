@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Component} from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [
+    HeaderComponent,
+    RouterOutlet,
+    FooterComponent
+    ],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-    <nav>
-      <ul>
-        <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Accueil</a></li>
-        <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">A propos</a></li>
-      </ul>
-    </nav>
+    <app-header/>
     <router-outlet />
+    <app-footer/>
   `,
-  styles: [],
+  styleUrls: ['../styles.css'],
 })
 export class AppComponent {
   title = 'CEF-Project';
