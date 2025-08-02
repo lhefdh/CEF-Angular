@@ -5,7 +5,7 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
+import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 
 export const routes: Routes = [
     {path:'' , component: HomeComponent},
@@ -14,5 +14,6 @@ export const routes: Routes = [
     {path:'contact' , component: ContactComponent},
     {path:'header' , component: HeaderComponent},
     {path:'footer' , component: FooterComponent},
-    {path: '**', component: PageNotFoundComponentComponent },  // Wildcard route for a 404 page
+    {path:'pageNotFound' , component: PageNotFoundComponent},
+    {path: '**' , component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];

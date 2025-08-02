@@ -23,10 +23,10 @@ import { Component } from '@angular/core';
                     </li>
                 </ul>
                 <ul class="contact-social-icons">
-                    <a class="contact-social-link" href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-                    <a class="contact-social-link" href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a class="contact-social-link" href="#"><i class="fa-brands fa-square-snapchat"></i></a>
-                    <a class="contact-social-link" href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a class="contact-social-link" href="https://x.com"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a class="contact-social-link" href="https://www.instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a class="contact-social-link" href="https://www.snapchat.com"><i class="fa-brands fa-square-snapchat"></i></a>
+                    <a class="contact-social-link" href="https://www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
                 </ul>
             </div>
             <div class="contact-form">

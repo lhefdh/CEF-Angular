@@ -5,9 +5,12 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product',
+
   imports: [ CommonModule],
   template: `
+  <!-- Loop pour le data provenant du service -->
   <div class='product-container' *ngFor= "let item of productsList">
+    <!-- Directive *ngIf pour ne retenir que le produit dont le ID correspont communiqué dans le params -->
     <div  class='product-card' *ngIf= 'id===item.id'>
       <img alt={{item.personnage}} src={{item.ImgSrc}} class ="product-img" >
       <div class='product-infos' >
@@ -29,18 +32,15 @@ import { ActivatedRoute } from '@angular/router';
   styles: [],
 })
 export class ProductComponent {
-
+  // Variable pour stocker le params.
   id: string | null='';
   productsList: any[] = [];
   constructor(private route:ActivatedRoute, private  productsService: ProductsService) {
      this.route.params.subscribe(params=>{
       this.id = params['id']
       this.productsList = this.productsService.products;
-      
      })
-    
     }
-   
 }
 
 
